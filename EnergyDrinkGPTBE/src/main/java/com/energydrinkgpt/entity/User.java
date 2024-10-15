@@ -41,4 +41,7 @@ public class User {
             inverseJoinColumns = { @JoinColumn(name = "gpt_model_id") }
     )
     private List<GPTModel> unlockedGpts;
+
+    @Column(name = "is_verified", nullable = false)
+    private boolean isVerified = false;
 }
