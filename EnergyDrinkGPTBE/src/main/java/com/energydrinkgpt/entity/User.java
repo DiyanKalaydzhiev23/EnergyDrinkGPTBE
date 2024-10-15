@@ -4,13 +4,13 @@ import com.energydrinkgpt.validation.ValidPassword;
 import jakarta.persistence.*;
 import jakarta.persistence.Table;
 import java.util.List;
-//import lombok.Getter;
-//import lombok.Setter;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "users")
-//@Getter
-//@Setter
+@Getter
+@Setter
 public class User {
 
     @Id

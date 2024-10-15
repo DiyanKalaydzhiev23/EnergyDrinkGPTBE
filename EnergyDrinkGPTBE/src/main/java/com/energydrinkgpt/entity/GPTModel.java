@@ -2,13 +2,13 @@ package com.energydrinkgpt.entity;
 
 import jakarta.persistence.*;
 import java.util.List;
-//import lombok.Getter;
-//import lombok.Setter;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "gpt_models")
-//@Getter
-//@Setter
+@Getter
+@Setter
 public class GPTModel {
 
     @Id
