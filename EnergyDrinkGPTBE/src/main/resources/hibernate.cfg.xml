@@ -1,0 +1,30 @@
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- PostgreSQL dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+        <!-- PostgreSQL driver -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+
+        <!-- Database URL -->
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/energy_drinks_gpt</property>
+
+        <!-- Database credentials -->
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">admin</property>
+
+        <!-- Automatically create or update the database schema -->
+        <property name="hibernate.hbm2ddl.auto">update</property>  <!-- Use 'create' for create or 'update' to avoid dropping the schema in the future -->
+
+        <!-- Show SQL queries in the console -->
+        <property name="hibernate.show_sql">true</property>
+
+        <!-- Mapping entity classes -->
+        <mapping class="com.energydrinkgpt.entity.User"/>  <!-- Add more mappings as you add more entities -->
+        <mapping class="com.energydrinkgpt.entity.Chat"/>
+        <mapping class="com.energydrinkgpt.entity.GPTModel"/>
+
+    </session-factory>
+</hibernate-configuration>
