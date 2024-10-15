@@ -1,13 +1,13 @@
 package com.energydrinkgpt.entity;
 
 import jakarta.persistence.*;
-//import lombok.Getter;
-//import lombok.Setter;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "chats")
-//@Getter
-//@Setter
+@Getter
+@Setter
 public class Chat {
 
     @Id
