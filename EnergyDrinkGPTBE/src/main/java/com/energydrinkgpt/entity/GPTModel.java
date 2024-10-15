@@ -23,4 +23,8 @@ public class GPTModel {
 
     @ManyToMany(mappedBy = "unlockedGpts")
     private List<User> users;  // Many-to-many relationship with User
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "image_id", referencedColumnName = "id") // This establishes the foreign key in GPTModel
+    private ImageModel image;
 }

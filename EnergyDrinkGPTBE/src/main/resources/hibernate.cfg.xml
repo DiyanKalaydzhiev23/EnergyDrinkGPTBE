@@ -25,6 +25,7 @@
         <mapping class="com.energydrinkgpt.entity.User"/>  <!-- Add more mappings as you add more entities -->
         <mapping class="com.energydrinkgpt.entity.Chat"/>
         <mapping class="com.energydrinkgpt.entity.GPTModel"/>
+        <mapping class="com.energydrinkgpt.entity.ImageModel"/>
 
     </session-factory>
 </hibernate-configuration>

@@ -4,6 +4,8 @@ import com.energydrinkgpt.validation.ValidPassword;
 import jakarta.persistence.*;
 import jakarta.persistence.Table;
 import java.util.List;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -20,6 +22,8 @@ public class User {
     @Column(name = "username", unique = true)
     private String username;
 
+    @NotBlank(message = "Email is mandatory")
+    @Email(message = "Email should be valid")
     @Column(name = "email", unique = true)
     private String email;
 
